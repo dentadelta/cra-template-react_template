@@ -1,5 +1,11 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
+from typing import Optional
+
+class Input(BaseModel):
+    input1: Optional[str]
+    input2: Optional[str]
+
 
 router = APIRouter()
 
@@ -25,3 +31,15 @@ async def helloworld():
         }
        
     return {'data': return_data, 'dataarray': return_array_data, 'datadict': return_dict_data}
+
+@router.post("/Appjs/Button")
+async def processButton(input: Input):
+    input = input.input1
+    if input.find('+') != -1:
+        input = input.split('+')
+        input = [int(i) for i in input]
+        input = sum(input)
+
+        return input
+    else:
+        return "Invalid input, addition command only"
