@@ -5,7 +5,9 @@
         "serve": "^11.2.0",
         "framer-motion": "^7.5.3",
         "axios": "^1.1.2",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "react-chartjs-2": "^4.3.1",
+        "chart.js": "^3.9.1"
       },
       "scripts": {
         "serve": "serve -s build",
