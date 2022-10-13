@@ -16,5 +16,5 @@ You may also see any lint errors in the console.
 
 ### `uvicorn main:app --reload`
 
-Run the backend server to feed data to the front end
-![alt text](Screenshot 2022-10-14 061854 "image Title")
+Run the backend server to feed data to the front end.\
+![alt text](Screenshot 2022-10-14 061854.png "image Title")
