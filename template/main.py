@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend import microservice1
+from backend import dashboard
 
 app = FastAPI()
 
@@ -18,3 +19,4 @@ app.add_middleware(
 )
 
 app.include_router(microservice1.router)
+app.include_router(dashboard.router)
